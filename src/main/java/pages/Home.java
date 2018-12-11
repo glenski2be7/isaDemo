@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,8 @@ public class Home {
     public void acceptTerms() {
         WebDriverWait wait = new WebDriverWait(this.driver, 15);
         //1. Co trzeba zrobić żeby zamknąć okno przyciskiem?
-        //goNextButton
+        //driver.findElement(By.xpath("xpath"));
+        //wait.until(ExpectedConditions.elementToBeClickable(go))
+        goNextButton.click();
     }
 }

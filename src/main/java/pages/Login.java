@@ -9,10 +9,10 @@ public class Login {
     private WebDriver driver;
 
     //4. Nie brakuje tu czegoś?
-    @FindBy(id = "")
+    @FindBy(id = "username")
     private WebElement loginInput;
     //5. I tu też?
-    @FindBy(id = "")
+    @FindBy(id = "username")
     private WebElement passwordInput;
 
     @FindBy(id = "login-button")
@@ -25,9 +25,9 @@ public class Login {
 
     public void loginAs(String username, String password) {
         //2. Jak wpisać do inputów wartości?
-        //loginInput
-        //passwordInput
+        loginInput.sendKeys(username);
+        passwordInput.sendKeys(password);
         //3. A jak zatwierdzic logowanie inaczej niż click()?
-        //loginButton
+        loginButton.submit();
     }
 }
